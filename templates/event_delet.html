@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Excluir Evento</h2>
+<p>Você tem certeza que deseja excluir o evento "{{ event.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar Exclusão</button>
+</form>
+{% endblock %}
